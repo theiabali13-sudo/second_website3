@@ -1,0 +1,77 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+body,
+[type="submit"] {
+  font-size: 1.6rem;
+  font-family: var(--font-family-raleway);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+.container {
+  margin: 0 auto;
+  max-width: calc(var(--container-width)+calc(var(--gutter) * 2));
+  padding-inline: var(--gutter);
+  display: grid;
+  row-gap: 11rem;
+}
+.video__loop {
+  position: fixed; /* يجعل العنصر ثابتًا في نافذة المتصفح */
+  top: 0; /* يضعه في أعلى الصفحة */
+  left: 0; /* يضعه في أقصى يسار الصفحة */
+  width: 100vw; /* يجعله يغطي كامل عرض الشاشة (viewport width) */
+  height: 100vh; /* يجعله يغطي كامل ارتفاع الشاشة (viewport height) */
+  object-fit: cover; /* يضمن تغطية الفيديو للمساحة بالكامل دون تشوه */
+  opacity: 0.18;
+  z-index: -1;
+}
+/* Global Style */
+.h2-heading {
+  font-size: var(--font-size-65);
+  font-weight: var(--font-weight-bold);
+  grid-column: 1/-1;
+  margin-bottom: 8.7rem;
+  text-transform: uppercase;
+}
+.h3-heading {
+  font-size: var(--font-size-38);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 2.5rem;
+}
+.section {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: start;
+}
+.section--with-bg {
+  padding: 7rem 0;
+}
+.section--with-bg2 {
+  padding: 7rem 0;
+}
+.section--with-bg::before {
+  content: "";
+  position: absolute;
+  height: 55%;
+  width: 100%;
+  justify-self: center;
+  z-index: -1;
+  background-color: var(--color- grey);
+}
+.section--with-bg2::before {
+  content: "";
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  background-color: var(--color-grey);
+  justify-self: center;
+  z-index: -1;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
