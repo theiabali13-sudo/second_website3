@@ -1,0 +1,84 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: start;
+}
+.bio {
+  column-gap: 7.4rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.bio__heading {
+  font-size: var(--font-size-70);
+  font-weight: var(--font-weight-bold);
+}
+.bio__objective {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-20);
+  margin: 3rem 0 8rem;
+}
+.bio__name {
+  font-weight: var(--font-weight-semi-bold);
+}
+.bio__facebook {
+  color: var(--color-blue);
+}
+.bio__linkedin {
+  color: var(--color-dard-blue);
+}
+.bio__Instgram {
+  color: var(--color-red);
+}
+.bio__links {
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-semi-bold);
+  text-decoration: none;
+}
+.say-hi-link {
+  background-color: var(--color-link-bg);
+  color: var(--color-button-text);
+  padding: 0.7rem 4.7rem;
+  border-radius: 0.6rem;
+}
+.find-out-link {
+  padding: 0.7rem 0;
+  margin-inline-start: 1.4rem;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0.5rem);
+  }
+  35% {
+    transform: translateY(-0.5rem);
+  }
+  70% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bio__arrow {
+  display: inline-block;
+  animation: jump 1.5s infinite ease-in-out;
+}
+.bio__pic-content {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  justify-self: end;
+}
+.bio__pic-content::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-light-blue);
+  width: 100%;
+  height: 33rem;
+  z-index: -1;
+  border-radius: 1.8rem;
+}
+.bio__pic {
+  width: 33.7rem;
+  padding-bottom: 0.4rem;
+  border-radius: 1rem;
+}

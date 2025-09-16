@@ -1,0 +1,111 @@
+@media (min-width: 1000px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    row-gap: 8rem;
+  }
+  .section {
+    grid-template-columns: 1fr;
+  }
+  .bio__pic-content {
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 4rem;
+  }
+  .skills__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects__mian {
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+    justify-items: center;
+  }
+  .projects__img {
+    order: -1;
+    margin-top: 1rem;
+  }
+  .clients__opinions {
+    font-size: var(--font-size-24);
+  }
+  .contact {
+    row-gap: 6rem;
+  }
+  .contact__formcontent {
+    order: -1;
+  }
+  @media (max-width: 500px) {
+    .header {
+      padding: 0;
+    }
+    .header::before {
+      z-index: 1;
+    }
+    .navigation {
+      display: flex;
+      gap: 2rem;
+    }
+    .bio__pic {
+      width: 100%;
+    }
+
+    .burger-menu {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 0.75rem;
+      z-index: 1;
+      align-self: center;
+    }
+    .burger-menu__bar {
+      height: 0.3rem;
+      width: 4.375rem;
+      background-color: var(--color-text);
+      transition: var(--transition-timing);
+    }
+    header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(1) {
+      transform: translateY(16px) rotate(40deg);
+    }
+    header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(2) {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(3) {
+      transform: translateY(-13px) rotate(-49deg);
+    }
+    .burger-menu__checkbox:checked + .navigation {
+      top: 80%;
+      padding-bottom: 1rem;
+    }
+    .navigation {
+      position: absolute;
+      width: 100vw;
+      background-color: var(--color-background);
+      top: 0;
+      padding: 1.21rem 0;
+      border-bottom: 0.1rem solid var(--color-text);
+      z-index: 0;
+    }
+    .navigation_list {
+      justify-content: center;
+    }
+    .toggle {
+      padding: 2rem 0;
+      z-index: 1;
+    }
+    .video__loop {
+      position: fixed; /* يجعل العنصر ثابتًا في نافذة المتصفح */
+      top: 0; /* يضعه في أعلى الصفحة */
+      left: 0; /* يضعه في أقصى يسار الصفحة */
+      width: 100%; /* يجعله يغطي كامل عرض الشاشة (viewport width) */
+      height: 100%; /* يجعله يغطي كامل ارتفاع الشاشة (viewport height) */
+      object-fit: cover; /* يضمن تغطية الفيديو للمساحة بالكامل دون تشوه */
+      opacity: 0.18;
+      z-index: -1;
+    }
+  }
+  /* Responsive */
+}
